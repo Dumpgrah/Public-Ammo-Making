@@ -1,6 +1,20 @@
 # Public-Ammo-Making
 
+A Mod For DayZ Standalone Video Game
+https://store.steampowered.com/app/221100/DayZ/
+
+Mod Includes
+- Ability to make Ammo 
+- Ability to Melt down Casing or Tips and Recast them into molds
+- Ability to Collect Deformed Casing from the ground after shooting, % chance based on server profile config
+- Ability to Retrieve Deformed tips form casings, % chance based on server profile config
+- Ability to Pull Apart Ammo
+
+
 This mod is Open source and free to use under the GNU AGPL 3.0 License v3.0. The mod offers currently the ability to make Ammo from scratch and give you the ability to craft ammo from spent casings
+
+Mod includes
+
 Source Code Rules
 
 For anyone interested in repacking please read all this
