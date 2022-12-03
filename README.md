@@ -14,6 +14,7 @@ Mod Includes
 - Ability to Collect Deformed Casing from the ground after shooting, % chance based on server profile config
 - Ability to Retrieve Deformed tips form casings, % chance based on server profile config
 - Ability to Pull Apart Ammo
+- Fully Custom Profile Config to control times/temps and such to better fit your servers needs
 
 Mod includes
 
