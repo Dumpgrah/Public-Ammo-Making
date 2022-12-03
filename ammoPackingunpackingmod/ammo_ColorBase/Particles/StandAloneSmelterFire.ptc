@@ -1,0 +1,45 @@
+EffectDef {
+ Emitors {
+  EmitorDef sparks_fire {
+   ShapeType Box
+   ShapeSize 0 0 0
+   ConeAngle 360 0 30
+   BirthRate 20
+   BirthRateRND 0
+   Offset 0 -0.01784 0
+   LocalTransform 1
+   Material "{D252F1C26CBA12FA}graphics/particles/materials/fire/fire_flare_03.emat"
+   CenterX 0
+   CenterY -0.7
+   ScaleX 0.1
+   ScaleY 0.256
+   SizeMultiplier 1.5
+   SizeRND 0
+   RandomRotDir 0
+   RotMultiplier 0
+   StretchMultiplier 1
+   StreakFullUV 0
+   VelAngle 0
+   RandomAngle 0
+   Sort 0
+   BillboardingType LockedAxis
+   Velocity 0
+   VelocityRND 0.1
+   RandomFrame 1
+   LifeTime 0.1
+   LifeTimeRND 0.05
+   Color {
+    0 0.1111 0.4097 0.7917 1 0 0 0.8889
+   }
+   Alpha {
+    0 1 0.42371 0.28472 1 0
+   }
+   RotationSpeed {
+    0 0.68056 0.05576 0.48611 1 0.85417
+   }
+   Size {
+    0 0.21528 1 0.61111
+   }
+  }
+ }
+}
