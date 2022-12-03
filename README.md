@@ -3,6 +3,8 @@
 A Mod For DayZ Standalone Video Game
 https://store.steampowered.com/app/221100/DayZ/
 
+Steam Workshop Mod for ease of use https://steamcommunity.com/sharedfiles/filedetails/?id=2834392060
+
 Mod Includes
 - Ability to make Ammo 
 - Ability to Melt down Casing or Tips and Recast them into molds
