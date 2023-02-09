@@ -106,7 +106,7 @@ class AM_Smoke_Improvised_Grenade extends M18SmokeGrenade_ColorBase
 
 	};
 	
-	protected void Activate()
+	override protected void Activate()
 	{
 		
 	};

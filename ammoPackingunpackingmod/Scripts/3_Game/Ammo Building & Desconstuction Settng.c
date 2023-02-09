@@ -32,10 +32,10 @@ class AmmoBuildingSettings
 			if ( ConfigVersion != "3")
 			{
 				ConfigVersion = "3";
-				int Safe_Mode = 1;
-				string I1  ="GunPowder Required to Fill Casings";
+				Safe_Mode = 1;
+				I1  ="GunPowder Required to Fill Casings";
 				GunPowder_Percentage_Required = 100; //value of 0-100
-				string Deconstruct ="Deconstruct Loss Percentages";
+				Deconstruct = "Deconstruct Loss Percentages";
 				Gunpowder_Saved_Percentage = 85; //value of 0-100
 				Tips_Saved_Percentage = 80;
 				Casing_Saved_Percentage = 80;
