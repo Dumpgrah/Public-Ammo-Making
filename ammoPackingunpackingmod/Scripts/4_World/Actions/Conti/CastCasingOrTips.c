@@ -47,13 +47,13 @@ class AM_ActionCastingCasingAmmo: ActionContinuousBase
 		StrongPistolCasingMold PistolMold = StrongPistolCasingMold.Cast( target_object );
 		//CrucibleMoltenBrass Crucible = CrucibleMoltenBrass.Cast(player.GetItemInHands());
         
-        if (RifleMold && Crucible && Crucible.GetQuantity() >= RQuantityRequired && Crucible.HotEnough())
+        if (RifleMold && RifleMold.GetSlotOccupied() == 0 && Crucible && Crucible.GetQuantity() >= RQuantityRequired && Crucible.HotEnough())
 		{
 			TendancyText = Crucible.GetRifleTendancyText();
 			
             return true;
         }
-		else if (PistolMold && Crucible && Crucible.GetQuantity() >= PQuantityRequired && Crucible.HotEnough())
+		else if (PistolMold && PistolMold.GetSlotOccupied() == 0 && Crucible && Crucible.GetQuantity() >= PQuantityRequired && Crucible.HotEnough())
 		{
 			TendancyText = Crucible.GetPistolTendancyText();
 			
@@ -81,6 +81,7 @@ class AM_ActionCastingCasingAmmo: ActionContinuousBase
 			Crucible.MinusQuantityPistol();
         }
     };
+
 };
 
 class AM_ActionCastingTipsAmmo: ActionContinuousBase
@@ -124,13 +125,13 @@ class AM_ActionCastingTipsAmmo: ActionContinuousBase
 		StrongPistolTipsMold PistolTipsMold = StrongPistolTipsMold.Cast( target_object );
 		//CrucibleMoltenBrass Crucible = CrucibleMoltenBrass.Cast(player.GetItemInHands());
         
-        if (RifleTipsMold  && Crucible && Crucible.GetQuantity() >= RQuantityRequired && Crucible.HotEnough())
+        if (RifleTipsMold && RifleTipsMold.GetSlotOccupied() == 0 && Crucible && Crucible.GetQuantity() >= RQuantityRequired && Crucible.HotEnough())
 		{
 			TendancyText = Crucible.GetRifleTendancyText();
 			
             return true;
         }
-		else if (PistolTipsMold && Crucible && Crucible.GetQuantity() >= PQuantityRequired && Crucible.HotEnough())
+		else if (PistolTipsMold && PistolTipsMold.GetSlotOccupied() == 0 && Crucible && Crucible.GetQuantity() >= PQuantityRequired && Crucible.HotEnough())
 		{
 			TendancyText = Crucible.GetPistolTendancyText();
 			

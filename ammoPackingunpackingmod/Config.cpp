@@ -249,7 +249,6 @@ class CfgVehicles
 		stackedUnit = "percentage";
 		varTemperatureMin=0;
 		varTemperatureMax=500;
-		varQuantityInit=0;
 		varQuantityMin=0;
 		varQuantityMax=100;
 		varQuantityDestroyOnMin=1;
@@ -299,7 +298,6 @@ class CfgVehicles
 		varTemperatureMin=0;
 		varTemperatureMax=1250;
 		varLiquidTypeInit=600;
-		varQuantityInit=100;
 		varQuantityMin=0;
 		varQuantityMax=100;
 		varQuantityDestroyOnMin=0;
@@ -325,7 +323,6 @@ class CfgVehicles
 		varTemperatureMin=0;
 		varTemperatureMax=500;
 		varLiquidTypeInit=600;
-		varQuantityInit=100;
 		varQuantityMin=0;
 		varQuantityMax=100;
 		varQuantityDestroyOnMin=0;
@@ -494,7 +491,7 @@ class CfgVehicles
 		descriptionShort="Mold that is Used for making metal casing for ammo, seems to be high quality and will last a while";
 		model="\ammoPackingunpackingmod\ammo_ColorBase\RifleMoldCasing.p3d";
 		attachments[]={"RifleCasingMold"};
-		simpleHiddenSelections[] = {"Casted_Casing"};
+		//simpleHiddenSelections[] = {"Casted_Casing"};
 	//	overrideDrawArea="3.0";
 		itemSize[]={4,4};
 		hitpoints=50;
@@ -716,6 +713,59 @@ class CfgVehicles
 		weight = 20;
 		itemSize[] = { 1,1 };
 		repairableWithKits[]={0};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\ammunition\data\357mag_loose.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\ammunition\data\357mag_loose.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\ammunition\data\357mag_loose_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\ammunition\data\357mag_loose_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\ammunition\data\357mag_loose_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 		
 	};
 	class Casing357 : AM_CasingBase
@@ -737,6 +787,59 @@ class CfgVehicles
 		weight = 20;
 		itemSize[] = { 1,1 };
 		repairableWithKits[]={0};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\ammunition\data\357mag_loose.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\ammunition\data\357mag_loose.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\ammunition\data\357mag_loose_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\ammunition\data\357mag_loose_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\ammunition\data\357mag_loose_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 		
 	};
 	class FilledCasing357 : Inventory_Base
@@ -758,6 +861,59 @@ class CfgVehicles
 		weight = 20;
 		itemSize[] = { 1,1 };
 		repairableWithKits[]={0};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\ammunition\data\357mag_loose.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\ammunition\data\357mag_loose.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\ammunition\data\357mag_loose_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\ammunition\data\357mag_loose_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\ammunition\data\357mag_loose_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 		
 	};
 	class Prep357Magnum : Inventory_Base
@@ -777,8 +933,61 @@ class CfgVehicles
 		varQuantityMax=20;
 		varQuantityDestroyOnMin=1;
 		weight = 20;
-		itemSize[] = { 1,2 };
+		itemSize[] = { 1,1 };
 		repairableWithKits[]={0};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\ammunition\data\357mag_loose.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\ammunition\data\357mag_loose.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\ammunition\data\357mag_loose_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\ammunition\data\357mag_loose_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\ammunition\data\357mag_loose_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 		
 	};
 	class Tips545x39 : AM_TipsBase
@@ -799,69 +1008,281 @@ class CfgVehicles
 		weight = 20;
 		itemSize[] = { 1,1 };
 		repairableWithKits[]={0};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\ammunition\data\545x39.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\ammunition\data\545x39.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\ammunition\data\545x39_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\ammunition\data\545x39_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\ammunition\data\545x39_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 		
 	};
 	class Casing545x39 : AM_CasingBase
 	{
-			scope = 2;
-			displayName = "545x39 Casings";
-			descriptionShort = "545x39 Casings used for crafting";
-			model = "\ammoPackingunpackingmod\ammo_ColorBase\545x39Casings.p3d";
-			animClass = "Knife";
-			canBeDigged=0;
-	        isMeleeWeapon=1; 
-			rotationFlags = 17;
-			quantityBar = 0;
-			canBeSplit=1;
-			varQuantityInit=1;
-			varQuantityMin=0;
-			varQuantityMax=20;
-			varQuantityDestroyOnMin=1;
-			weight = 20;
-			itemSize[] = { 1,1 };
-			repairableWithKits[]={0};
+		scope = 2;
+		displayName = "545x39 Casings";
+		descriptionShort = "545x39 Casings used for crafting";
+		model = "\ammoPackingunpackingmod\ammo_ColorBase\545x39Casings.p3d";
+		animClass = "Knife";
+		canBeDigged=0;
+	       isMeleeWeapon=1; 
+		rotationFlags = 17;
+		quantityBar = 0;
+		canBeSplit=1;
+		varQuantityInit=1;
+		varQuantityMin=0;
+		varQuantityMax=20;
+		varQuantityDestroyOnMin=1;
+		weight = 20;
+		itemSize[] = { 1,1 };
+		repairableWithKits[]={0};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\ammunition\data\545x39.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\ammunition\data\545x39.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\ammunition\data\545x39_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\ammunition\data\545x39_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\ammunition\data\545x39_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 		
 	};
 	class FilledCasing545x39 : Inventory_Base
 	{
-			scope = 2;
-			displayName = "Filled 545x39 Casings";
-			descriptionShort = "Filled 545x39 Casings,missing the tips?";
-			model = "\ammoPackingunpackingmod\ammo_ColorBase\545x39Casings.p3d";
-			animClass = "Knife";
-			canBeDigged=0;
-	        isMeleeWeapon=1; 
-			rotationFlags = 17;
-			quantityBar = 0;
-			canBeSplit=1;
-			varQuantityInit=1;
-			varQuantityMin=0;
-			varQuantityMax=20;
-			varQuantityDestroyOnMin=1;
-			weight = 20;
-			itemSize[] = { 1,1 };
-			repairableWithKits[]={0};
+		scope = 2;
+		displayName = "Filled 545x39 Casings";
+		descriptionShort = "Filled 545x39 Casings,missing the tips?";
+		model = "\ammoPackingunpackingmod\ammo_ColorBase\545x39Casings.p3d";
+		animClass = "Knife";
+		canBeDigged=0;
+	       isMeleeWeapon=1; 
+		rotationFlags = 17;
+		quantityBar = 0;
+		canBeSplit=1;
+		varQuantityInit=1;
+		varQuantityMin=0;
+		varQuantityMax=20;
+		varQuantityDestroyOnMin=1;
+		weight = 20;
+		itemSize[] = { 1,1 };
+		repairableWithKits[]={0};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\ammunition\data\545x39.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\ammunition\data\545x39.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\ammunition\data\545x39_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\ammunition\data\545x39_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\ammunition\data\545x39_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 		
 	};
 	class Prep545x39 : Inventory_Base
 	{
-			scope = 2;
-			displayName = "Prep'd 545x39";
-			descriptionShort = "Just need to use on the press to finish the process";
-			model = "\ammoPackingunpackingmod\ammo_ColorBase\545x39Prep.p3d";
-			animClass = "Knife";
-			canBeDigged=0;
-	        isMeleeWeapon=1; 
-			rotationFlags = 17;
-			quantityBar = 0;
-			canBeSplit=1;
-			varQuantityInit=1;
-			varQuantityMin=0;
-			varQuantityMax=20;
-			varQuantityDestroyOnMin=1;
-			weight = 20;
-			itemSize[] = { 1,2 };
-			repairableWithKits[]={0};
+		scope = 2;
+		displayName = "Prep'd 545x39";
+		descriptionShort = "Just need to use on the press to finish the process";
+		model = "\ammoPackingunpackingmod\ammo_ColorBase\545x39Prep.p3d";
+		animClass = "Knife";
+		canBeDigged=0;
+	       isMeleeWeapon=1; 
+		rotationFlags = 17;
+		quantityBar = 0;
+		canBeSplit=1;
+		varQuantityInit=1;
+		varQuantityMin=0;
+		varQuantityMax=20;
+		varQuantityDestroyOnMin=1;
+		weight = 20;
+		itemSize[] = { 1,1 };
+		repairableWithKits[]={0};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\ammunition\data\545x39.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\ammunition\data\545x39.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\ammunition\data\545x39_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\ammunition\data\545x39_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\ammunition\data\545x39_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 		
 	};
 	class Tips556x45 : AM_TipsBase
@@ -881,7 +1302,59 @@ class CfgVehicles
 		weight = 20;
 		itemSize[] = { 1,1 };
 		repairableWithKits[]={0};
-		
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\ammunition\data\556_LooseRounds5.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\ammunition\data\556_LooseRounds5.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\ammunition\data\556_LooseRounds5_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\ammunition\data\556_LooseRounds5_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\ammunition\data\556_LooseRounds5_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 	};
 	class Casing556x45 : AM_CasingBase
 	{
@@ -900,7 +1373,59 @@ class CfgVehicles
 		weight = 20;
 		itemSize[] = { 1,1 };
 		repairableWithKits[]={0};
-		
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\ammunition\data\556_LooseRounds5.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\ammunition\data\556_LooseRounds5.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\ammunition\data\556_LooseRounds5_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\ammunition\data\556_LooseRounds5_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\ammunition\data\556_LooseRounds5_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 	};
 	class FilledCasing556x45 : Inventory_Base
 	{
@@ -921,7 +1446,59 @@ class CfgVehicles
 		weight = 20;
 		itemSize[] = { 1,1 };
 		repairableWithKits[]={0};
-		
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\ammunition\data\556_LooseRounds5.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\ammunition\data\556_LooseRounds5.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\ammunition\data\556_LooseRounds5_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\ammunition\data\556_LooseRounds5_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\ammunition\data\556_LooseRounds5_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 	};
 	class Prep556x45 : Inventory_Base
 	{
@@ -938,9 +1515,61 @@ class CfgVehicles
 		varQuantityMax=20;
 		varQuantityDestroyOnMin=1;
 		weight = 20;
-		itemSize[] = { 1,2 };
+		itemSize[] = { 1,1 };
 		repairableWithKits[]={0};
-		
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\ammunition\data\556_LooseRounds5.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\ammunition\data\556_LooseRounds5.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\ammunition\data\556_LooseRounds5_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\ammunition\data\556_LooseRounds5_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\ammunition\data\556_LooseRounds5_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 	};
 	class Tips762x39 : AM_TipsBase
 	{
@@ -959,7 +1588,59 @@ class CfgVehicles
 		weight = 20;
 		itemSize[] = { 1,1 };
 		repairableWithKits[]={0};
-		
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\ammunition\data\762x39.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\ammunition\data\762x39.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\ammunition\data\762x39_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\ammunition\data\762x39_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\ammunition\data\762x39_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 	};
 	class Casing762x39 : AM_CasingBase
 	{
@@ -978,28 +1659,132 @@ class CfgVehicles
 		weight = 20;
 		itemSize[] = { 1,1 };
 		repairableWithKits[]={0};
-		
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\ammunition\data\762x39.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\ammunition\data\762x39.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\ammunition\data\762x39_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\ammunition\data\762x39_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\ammunition\data\762x39_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 	};
 	class FilledCasing762x39 : Inventory_Base
 	{
-			scope = 2;
-			displayName = "Filled 762x39 Casings";
-			descriptionShort = "Filled 762x39 Casings,missing the tips?";
-			model = "\ammoPackingunpackingmod\ammo_ColorBase\762x39Casings.p3d";
-			animClass = "Knife";
-			canBeDigged=0;
-	        isMeleeWeapon=1; 
-			rotationFlags = 17;
-			quantityBar = 0;
-			canBeSplit=1;
-			varQuantityInit=1;
-			varQuantityMin=0;
-			varQuantityMax=20;
-			varQuantityDestroyOnMin=1;
-			weight = 20;
-			itemSize[] = { 1,1 };
-			repairableWithKits[]={0};
-		
+		scope = 2;
+		displayName = "Filled 762x39 Casings";
+		descriptionShort = "Filled 762x39 Casings,missing the tips?";
+		model = "\ammoPackingunpackingmod\ammo_ColorBase\762x39Casings.p3d";
+		animClass = "Knife";
+		canBeDigged=0;
+	    isMeleeWeapon=1; 
+		rotationFlags = 17;
+		quantityBar = 0;
+		canBeSplit=1;
+		varQuantityInit=1;
+		varQuantityMin=0;
+		varQuantityMax=20;
+		varQuantityDestroyOnMin=1;
+		weight = 20;
+		itemSize[] = { 1,1 };
+		repairableWithKits[]={0};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\ammunition\data\762x39.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\ammunition\data\762x39.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\ammunition\data\762x39_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\ammunition\data\762x39_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\ammunition\data\762x39_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 	};
 	class Prep762x39 : Inventory_Base
 	{
@@ -1016,9 +1801,61 @@ class CfgVehicles
 		varQuantityMax=20;
 		varQuantityDestroyOnMin=1;
 		weight = 20;
-		itemSize[] = { 1,2 };
+		itemSize[] = { 1,1 };
 		repairableWithKits[]={0};
-		
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\ammunition\data\762x39.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\ammunition\data\762x39.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\ammunition\data\762x39_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\ammunition\data\762x39_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\ammunition\data\762x39_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 	};
 	class Tips308Win : AM_TipsBase
 	{
@@ -1037,6 +1874,59 @@ class CfgVehicles
 		weight = 20;
 		itemSize[] = { 1,1 };
 		repairableWithKits[]={0};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\ammunition\data\308_loose.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\ammunition\data\308_loose.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\ammunition\data\308_loose_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\ammunition\data\308_loose_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\ammunition\data\308_loose_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 		
 	};
 	class Casing308Win : AM_CasingBase
@@ -1056,6 +1946,59 @@ class CfgVehicles
 		weight = 20;
 		itemSize[] = { 1,1 };
 		repairableWithKits[]={0};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\ammunition\data\308_loose.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\ammunition\data\308_loose.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\ammunition\data\308_loose_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\ammunition\data\308_loose_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\ammunition\data\308_loose_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 		
 	};
 	class FilledCasing308Win : Inventory_Base
@@ -1077,6 +2020,59 @@ class CfgVehicles
 			weight = 20;
 			itemSize[] = { 1,1 };
 			repairableWithKits[]={0};
+			class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\ammunition\data\308_loose.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\ammunition\data\308_loose.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\ammunition\data\308_loose_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\ammunition\data\308_loose_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\ammunition\data\308_loose_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 		
 	};
 	class FilledCasing308WinOL : Inventory_Base
@@ -1098,6 +2094,59 @@ class CfgVehicles
 			weight = 20;
 			itemSize[] = { 1,1 };
 			repairableWithKits[]={0};
+			class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\ammunition\data\308_loose.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\ammunition\data\308_loose.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\ammunition\data\308_loose_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\ammunition\data\308_loose_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\ammunition\data\308_loose_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 		
 	};
 	class Prep308Win : Inventory_Base
@@ -1115,8 +2164,61 @@ class CfgVehicles
 		varQuantityMax=20;
 		varQuantityDestroyOnMin=1;
 		weight = 20;
-		itemSize[] = { 1,2 };
+		itemSize[] = { 1,1 };
 		repairableWithKits[]={0};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\ammunition\data\308_loose.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\ammunition\data\308_loose.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\ammunition\data\308_loose_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\ammunition\data\308_loose_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\ammunition\data\308_loose_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 		
 	};
 	class Prep308WinOL : Inventory_Base
@@ -1134,8 +2236,61 @@ class CfgVehicles
 		varQuantityMax=20;
 		varQuantityDestroyOnMin=1;
 		weight = 20;
-		itemSize[] = { 1,2 };
+		itemSize[] = { 1,1 };
 		repairableWithKits[]={0};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\ammunition\data\308_loose.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\ammunition\data\308_loose.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\ammunition\data\308_loose_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\ammunition\data\308_loose_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\ammunition\data\308_loose_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 		
 	};
 	class Tips762x54 : AM_TipsBase
@@ -1155,6 +2310,59 @@ class CfgVehicles
 		weight = 20;
 		itemSize[] = { 1,1 };
 		repairableWithKits[]={0};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\attachments\data\mosinclip.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\attachments\data\mosinclip.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\attachments\data\mosinclip_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\attachments\data\mosinclip_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\attachments\data\mosinclip_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 		
 	};
 	class Tips762x54Rubber : AM_TipsBase
@@ -1174,6 +2382,59 @@ class CfgVehicles
 		weight = 20;
 		itemSize[] = { 1,1 };
 		repairableWithKits[]={0};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\attachments\data\mosinclip.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\attachments\data\mosinclip.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\attachments\data\mosinclip_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\attachments\data\mosinclip_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\attachments\data\mosinclip_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 		
 	};
 	class Casing762x54 : AM_CasingBase
@@ -1193,6 +2454,59 @@ class CfgVehicles
 		weight = 20;
 		itemSize[] = { 1,1 };
 		repairableWithKits[]={0};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\attachments\data\mosinclip.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\attachments\data\mosinclip.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\attachments\data\mosinclip_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\attachments\data\mosinclip_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\attachments\data\mosinclip_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 		
 	};
 	class FilledCasing762x54 : Inventory_Base
@@ -1214,6 +2528,59 @@ class CfgVehicles
 			weight = 20;
 			itemSize[] = { 1,1 };
 			repairableWithKits[]={0};
+			class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\attachments\data\mosinclip.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\attachments\data\mosinclip.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\attachments\data\mosinclip_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\attachments\data\mosinclip_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\attachments\data\mosinclip_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 		
 	};
 	class FilledCasing762x54OP : Inventory_Base
@@ -1235,6 +2602,59 @@ class CfgVehicles
 			weight = 20;
 			itemSize[] = { 1,1 };
 			repairableWithKits[]={0};
+			class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\attachments\data\mosinclip.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\attachments\data\mosinclip.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\attachments\data\mosinclip_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\attachments\data\mosinclip_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\attachments\data\mosinclip_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 		
 	};
 	class Prep762x54 : Inventory_Base
@@ -1252,8 +2672,61 @@ class CfgVehicles
 		varQuantityMax=20;
 		varQuantityDestroyOnMin=1;
 		weight = 20;
-		itemSize[] = { 1,2 };
+		itemSize[] = { 1,1 };
 		repairableWithKits[]={0};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\attachments\data\mosinclip.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\attachments\data\mosinclip.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\attachments\data\mosinclip_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\attachments\data\mosinclip_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\attachments\data\mosinclip_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 		
 	};
 	class Prep762x54Rubber : Inventory_Base
@@ -1271,8 +2744,61 @@ class CfgVehicles
 		varQuantityMax=20;
 		varQuantityDestroyOnMin=1;
 		weight = 20;
-		itemSize[] = { 1,2 };
+		itemSize[] = { 1,1 };
 		repairableWithKits[]={0};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\attachments\data\mosinclip.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\attachments\data\mosinclip.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\attachments\data\mosinclip_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\attachments\data\mosinclip_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\attachments\data\mosinclip_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 		
 	};
 	class Prep762x54OP : Inventory_Base
@@ -1290,8 +2816,61 @@ class CfgVehicles
 		varQuantityMax=20;
 		varQuantityDestroyOnMin=1;
 		weight = 20;
-		itemSize[] = { 1,2 };
+		itemSize[] = { 1,1 };
 		repairableWithKits[]={0};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\attachments\data\mosinclip.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\attachments\data\mosinclip.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\attachments\data\mosinclip_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\attachments\data\mosinclip_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\attachments\data\mosinclip_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 		
 	};
 	class Tips9x39 : AM_TipsBase
@@ -1311,6 +2890,59 @@ class CfgVehicles
 		weight = 20;
 		itemSize[] = { 1,1 };
 		repairableWithKits[]={0};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\attachments\magazine\data\vss_mag.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\attachments\magazine\data\vss_mag.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\attachments\magazine\data\vss_mag_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\attachments\magazine\data\vss_mag_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\attachments\magazine\data\vss_mag_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 		
 	};
 	class Casing9x39 : AM_CasingBase
@@ -1330,27 +2962,133 @@ class CfgVehicles
 		weight = 20;
 		itemSize[] = { 1,1 };
 		repairableWithKits[]={0};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\attachments\magazine\data\vss_mag.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\attachments\magazine\data\vss_mag.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\attachments\magazine\data\vss_mag_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\attachments\magazine\data\vss_mag_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\attachments\magazine\data\vss_mag_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 		
 	};
 	class FilledCasing9x39 : Inventory_Base
 	{
-			scope = 2;
-			displayName = "Filled 9x39 Casing";
-			descriptionShort = "Filled 9x39 Casings,missing the tips?";
-			model = "\ammoPackingunpackingmod\ammo_ColorBase\9x39Casings.p3d";
-			animClass = "Knife";
-			canBeDigged=0;
-	        isMeleeWeapon=1; 
-			rotationFlags = 17;
-			quantityBar = 0;
-			canBeSplit=1;
-			varQuantityInit=1;
-			varQuantityMin=0;
-			varQuantityMax=20;
-			varQuantityDestroyOnMin=1;
-			weight = 20;
-			itemSize[] = { 1,1 };
-			repairableWithKits[]={0};
+		scope = 2;
+		displayName = "Filled 9x39 Casing";
+		descriptionShort = "Filled 9x39 Casings,missing the tips?";
+		model = "\ammoPackingunpackingmod\ammo_ColorBase\9x39Casings.p3d";
+		animClass = "Knife";
+		canBeDigged=0;
+	    isMeleeWeapon=1; 
+		rotationFlags = 17;
+		quantityBar = 0;
+		canBeSplit=1;
+		varQuantityInit=1;
+		varQuantityMin=0;
+		varQuantityMax=20;
+		varQuantityDestroyOnMin=1;
+		weight = 20;
+		itemSize[] = { 1,1 };
+		repairableWithKits[]={0};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\attachments\magazine\data\vss_mag.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\attachments\magazine\data\vss_mag.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\attachments\magazine\data\vss_mag_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\attachments\magazine\data\vss_mag_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\attachments\magazine\data\vss_mag_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 		
 	};
 	class Prep9x39 : Inventory_Base
@@ -1368,8 +3106,61 @@ class CfgVehicles
 		varQuantityMax=20;
 		varQuantityDestroyOnMin=1;
 		weight = 20;
-		itemSize[] = { 1,2 };
+		itemSize[] = { 1,1 };
 		repairableWithKits[]={0};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\attachments\magazine\data\vss_mag.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\attachments\magazine\data\vss_mag.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\attachments\magazine\data\vss_mag_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\attachments\magazine\data\vss_mag_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\attachments\magazine\data\vss_mag_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 		
 	};
 	class Tips45ACP : AM_TipsBase
@@ -1389,6 +3180,59 @@ class CfgVehicles
 		weight = 20;
 		itemSize[] = { 1,1 };
 		repairableWithKits[]={0};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\ammunition\data\45cal_loose.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\ammunition\data\45cal_loose.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\ammunition\data\45cal_loose_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\ammunition\data\45cal_loose_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\ammunition\data\45cal_loose_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 		
 	};
 	class TipsRubber45ACP : AM_TipsBase
@@ -1408,6 +3252,59 @@ class CfgVehicles
 		weight = 20;
 		itemSize[] = { 1,1 };
 		repairableWithKits[]={0};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\ammunition\data\45cal_loose.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\ammunition\data\45cal_loose.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\ammunition\data\45cal_loose_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\ammunition\data\45cal_loose_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\ammunition\data\45cal_loose_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 		
 	};
 	class Casing45ACP : AM_CasingBase
@@ -1427,6 +3324,59 @@ class CfgVehicles
 		weight = 20;
 		itemSize[] = { 1,1 };
 		repairableWithKits[]={0};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\ammunition\data\45cal_loose.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\ammunition\data\45cal_loose.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\ammunition\data\45cal_loose_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\ammunition\data\45cal_loose_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\ammunition\data\45cal_loose_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 		
 	};
 	class FilledCasing45ACP : Inventory_Base
@@ -1448,6 +3398,59 @@ class CfgVehicles
 			weight = 20;
 			itemSize[] = { 1,1 };
 			repairableWithKits[]={0};
+			class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\ammunition\data\45cal_loose.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\ammunition\data\45cal_loose.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\ammunition\data\45cal_loose_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\ammunition\data\45cal_loose_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\ammunition\data\45cal_loose_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 		
 	};
 	class Prep45ACP : Inventory_Base
@@ -1465,8 +3468,61 @@ class CfgVehicles
 		varQuantityMax=25;
 		varQuantityDestroyOnMin=1;
 		weight = 20;
-		itemSize[] = { 1,2 };
+		itemSize[] = { 1,1 };
 		repairableWithKits[]={0};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\ammunition\data\45cal_loose.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\ammunition\data\45cal_loose.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\ammunition\data\45cal_loose_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\ammunition\data\45cal_loose_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\ammunition\data\45cal_loose_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 		
 	};
 	class PrepRubber45ACP : Inventory_Base
@@ -1484,8 +3540,61 @@ class CfgVehicles
 		varQuantityMax=25;
 		varQuantityDestroyOnMin=1;
 		weight = 20;
-		itemSize[] = { 1,2 };
+		itemSize[] = { 1,1 };
 		repairableWithKits[]={0};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\ammunition\data\45cal_loose.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\ammunition\data\45cal_loose.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\ammunition\data\45cal_loose_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\ammunition\data\45cal_loose_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\ammunition\data\45cal_loose_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 		
 	};
 	class Tips9X19 : AM_TipsBase
@@ -1505,6 +3614,59 @@ class CfgVehicles
 		weight = 20;
 		itemSize[] = { 1,1 };
 		repairableWithKits[]={0};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\ammunition\data\9mm.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\ammunition\data\9mm.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\ammunition\data\9mm_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\ammunition\data\9mm_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\ammunition\data\9mm_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 		
 	};
 	class TipsRubber9X19 : AM_TipsBase
@@ -1524,6 +3686,59 @@ class CfgVehicles
 		weight = 20;
 		itemSize[] = { 1,1 };
 		repairableWithKits[]={0};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\ammunition\data\9mm.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\ammunition\data\9mm.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\ammunition\data\9mm_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\ammunition\data\9mm_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\ammunition\data\9mm_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 		
 	};
 	class Casing9X19 : AM_CasingBase
@@ -1543,6 +3758,59 @@ class CfgVehicles
 		weight = 20;
 		itemSize[] = { 1,1 };
 		repairableWithKits[]={0};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\ammunition\data\9mm.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\ammunition\data\9mm.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\ammunition\data\9mm_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\ammunition\data\9mm_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\ammunition\data\9mm_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 		
 	};
 	class FilledCasing9X19 : Inventory_Base
@@ -1564,6 +3832,59 @@ class CfgVehicles
 			weight = 20;
 			itemSize[] = { 1,1 };
 			repairableWithKits[]={0};
+			class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\ammunition\data\9mm.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\ammunition\data\9mm.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\ammunition\data\9mm_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\ammunition\data\9mm_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\ammunition\data\9mm_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 		
 	};
 	class Prep9X19 : Inventory_Base
@@ -1581,8 +3902,61 @@ class CfgVehicles
 		varQuantityMax=25;
 		varQuantityDestroyOnMin=1;
 		weight = 20;
-		itemSize[] = { 1,2 };
+		itemSize[] = { 1,1 };
 		repairableWithKits[]={0};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\ammunition\data\9mm.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\ammunition\data\9mm.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\ammunition\data\9mm_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\ammunition\data\9mm_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\ammunition\data\9mm_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 		
 	};
 	class PrepRubber9X19 : Inventory_Base
@@ -1600,8 +3974,61 @@ class CfgVehicles
 		varQuantityMax=25;
 		varQuantityDestroyOnMin=1;
 		weight = 20;
-		itemSize[] = { 1,2 };
+		itemSize[] = { 1,1 };
 		repairableWithKits[]={0};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\ammunition\data\9mm.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\ammunition\data\9mm.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\ammunition\data\9mm_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\ammunition\data\9mm_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\ammunition\data\9mm_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 		
 	};
 	class Tips22LR : AM_TipsBase
@@ -1640,27 +4067,133 @@ class CfgVehicles
 		weight = 20;
 		itemSize[] = { 1,1 };
 		repairableWithKits[]={0};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\ammunition\data\22lr.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\ammunition\data\22lr.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\ammunition\data\22lr_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\ammunition\data\22lr_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\ammunition\data\22lr_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 		
 	};
 	class FilledCasing22LR : Inventory_Base
 	{
-			scope = 2;
-			displayName = "Filled 22LR Casing";
-			descriptionShort = "Filled 22LR Casings,missing the tips?";
-			model = "\ammoPackingunpackingmod\ammo_ColorBase\22Casings.p3d";
-			animClass = "Knife";
-			canBeDigged=0;
-	        isMeleeWeapon=1; 
-			rotationFlags = 17;
-			quantityBar = 0;
-			canBeSplit=1;
-			varQuantityInit=1;
-			varQuantityMin=0;
-			varQuantityMax=50;
-			varQuantityDestroyOnMin=1;
-			weight = 20;
-			itemSize[] = { 1,1 };
-			repairableWithKits[]={0};
+		scope = 2;
+		displayName = "Filled 22LR Casing";
+		descriptionShort = "Filled 22LR Casings,missing the tips?";
+		model = "\ammoPackingunpackingmod\ammo_ColorBase\22Casings.p3d";
+		animClass = "Knife";
+		canBeDigged=0;
+	    isMeleeWeapon=1; 
+		rotationFlags = 17;
+		quantityBar = 0;
+		canBeSplit=1;
+		varQuantityInit=1;
+		varQuantityMin=0;
+		varQuantityMax=50;
+		varQuantityDestroyOnMin=1;
+		weight = 20;
+		itemSize[] = { 1,1 };
+		repairableWithKits[]={0};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\ammunition\data\22lr.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\ammunition\data\22lr.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\ammunition\data\22lr_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\ammunition\data\22lr_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\ammunition\data\22lr_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 		
 	};
 	class Prep22LR : Inventory_Base
@@ -1678,8 +4211,61 @@ class CfgVehicles
 		varQuantityMax=50;
 		varQuantityDestroyOnMin=1;
 		weight = 20;
-		itemSize[] = { 1,2 };
+		itemSize[] = { 1,1 };
 		repairableWithKits[]={0};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\ammunition\data\22lr.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\ammunition\data\22lr.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\ammunition\data\22lr_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\ammunition\data\22lr_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\ammunition\data\22lr_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 		
 	};
 	class Tips380ACP : AM_TipsBase
@@ -1718,6 +4304,59 @@ class CfgVehicles
 		weight = 20;
 		itemSize[] = { 1,1 };
 		repairableWithKits[]={0};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"dz\weapons\ammunition\data\380_ammo.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"dz\weapons\ammunition\data\380_ammo.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"dz\weapons\ammunition\data\380_ammo_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"dz\weapons\ammunition\data\380_ammo_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"dz\weapons\ammunition\data\380_ammo_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 		
 	};
 	class Casing380ACP : AM_CasingBase
@@ -1737,6 +4376,59 @@ class CfgVehicles
 		weight = 20;
 		itemSize[] = { 1,1 };
 		repairableWithKits[]={0};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"dz\weapons\ammunition\data\380_ammo.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"dz\weapons\ammunition\data\380_ammo.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"dz\weapons\ammunition\data\380_ammo_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"dz\weapons\ammunition\data\380_ammo_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"dz\weapons\ammunition\data\380_ammo_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 		
 	};
 	class FilledCasing380ACP : Inventory_Base
@@ -1758,6 +4450,59 @@ class CfgVehicles
 			weight = 20;
 			itemSize[] = { 1,1 };
 			repairableWithKits[]={0};
+			class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"dz\weapons\ammunition\data\380_ammo.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"dz\weapons\ammunition\data\380_ammo.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"dz\weapons\ammunition\data\380_ammo_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"dz\weapons\ammunition\data\380_ammo_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"dz\weapons\ammunition\data\380_ammo_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 		
 	};
 	class Prep380ACP : Inventory_Base
@@ -1775,8 +4520,61 @@ class CfgVehicles
 		varQuantityMax=35;
 		varQuantityDestroyOnMin=1;
 		weight = 20;
-		itemSize[] = { 1,2 };
+		itemSize[] = { 1,1 };
 		repairableWithKits[]={0};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"dz\weapons\ammunition\data\380_ammo.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"dz\weapons\ammunition\data\380_ammo.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"dz\weapons\ammunition\data\380_ammo_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"dz\weapons\ammunition\data\380_ammo_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"dz\weapons\ammunition\data\380_ammo_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 		
 	};
 	class PrepRubber380ACP : Inventory_Base
@@ -1794,8 +4592,61 @@ class CfgVehicles
 		varQuantityMax=35;
 		varQuantityDestroyOnMin=1;
 		weight = 20;
-		itemSize[] = { 1,2 };
+		itemSize[] = { 1,1 };
 		repairableWithKits[]={0};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"dz\weapons\ammunition\data\380_ammo.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"dz\weapons\ammunition\data\380_ammo.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"dz\weapons\ammunition\data\380_ammo_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"dz\weapons\ammunition\data\380_ammo_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"dz\weapons\ammunition\data\380_ammo_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 		
 	};
 	class TipsBuckshot : AM_TipsBase
@@ -1834,6 +4685,59 @@ class CfgVehicles
 		weight = 20;
 		itemSize[] = { 1,1 };
 		repairableWithKits[]={0};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\ammunition\data\rem870_ammo.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\ammunition\data\rem870_ammo.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\ammunition\data\rem870_ammo_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\ammunition\data\rem870_ammo_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\ammunition\data\rem870_ammo_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 		
 	};
 	class FilledCasingBuckshot : Inventory_Base
@@ -1855,6 +4759,59 @@ class CfgVehicles
 			weight = 20;
 			itemSize[] = { 1,1 };
 			repairableWithKits[]={0};
+			class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\ammunition\data\rem870_ammo.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\ammunition\data\rem870_ammo.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\ammunition\data\rem870_ammo_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\ammunition\data\rem870_ammo_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\ammunition\data\rem870_ammo_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 		
 	};
 	class PrepBuckshot : Inventory_Base
@@ -1872,8 +4829,61 @@ class CfgVehicles
 		varQuantityMax=10;
 		varQuantityDestroyOnMin=1;
 		weight = 20;
-		itemSize[] = { 1,2 };
+		itemSize[] = { 1,1 };
 		repairableWithKits[]={0};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\ammunition\data\rem870_ammo.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\ammunition\data\rem870_ammo.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\ammunition\data\rem870_ammo_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\ammunition\data\rem870_ammo_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\ammunition\data\rem870_ammo_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 		
 	};
 	class TipsSlug : AM_TipsBase
@@ -1931,6 +4941,59 @@ class CfgVehicles
 		weight = 20;
 		itemSize[] = { 1,1 };
 		repairableWithKits[]={0};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\ammunition\data\rem870_ammo.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\ammunition\data\rem870_ammo.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\ammunition\data\rem870_ammo_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\ammunition\data\rem870_ammo_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\ammunition\data\rem870_ammo_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 		
 	};
 	class CasingCraftedShotgunShells : AM_CasingBase
@@ -1971,6 +5034,59 @@ class CfgVehicles
 			weight = 20;
 			itemSize[] = { 1,1 };
 			repairableWithKits[]={0};
+			class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\ammunition\data\rem870_ammo.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\ammunition\data\rem870_ammo.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\ammunition\data\rem870_ammo_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\ammunition\data\rem870_ammo_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\ammunition\data\rem870_ammo_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 		
 	};
 	class FilledCasingSlug : Inventory_Base
@@ -1992,6 +5108,59 @@ class CfgVehicles
 			weight = 20;
 			itemSize[] = { 1,1 };
 			repairableWithKits[]={0};
+			class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\ammunition\data\rem870_ammo.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\ammunition\data\rem870_ammo.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\ammunition\data\rem870_ammo_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\ammunition\data\rem870_ammo_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\ammunition\data\rem870_ammo_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 		
 	};
 	class PrepSlug : Inventory_Base
@@ -2009,8 +5178,61 @@ class CfgVehicles
 		varQuantityMax=10;
 		varQuantityDestroyOnMin=1;
 		weight = 20;
-		itemSize[] = { 1,2 };
+		itemSize[] = { 1,1 };
 		repairableWithKits[]={0};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\weapons\ammunition\data\rem870_ammo.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\weapons\ammunition\data\rem870_ammo.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\weapons\ammunition\data\rem870_ammo_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\weapons\ammunition\data\rem870_ammo_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\weapons\ammunition\data\rem870_ammo_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
 		
 	};
 	class DeFormedPistolCasing : AM_CasingBase

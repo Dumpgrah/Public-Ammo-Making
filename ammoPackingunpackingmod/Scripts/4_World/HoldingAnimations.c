@@ -8,6 +8,8 @@ modded class ModItemRegisterCallbacks
 	};
 	override void RegisterOneHanded(DayZPlayerType pType, DayzPlayerItemBehaviorCfg pBehavior)
 	{
+		super.RegisterOneHanded(pType, pBehavior);
+		
 		pType.AddItemInHandsProfileIK("AM_Improvised_Grenade", "dz/anims/workspaces/player/player_main/player_main_1h.asi", pBehavior,			"dz/anims/anm/player/ik/ammunition/40mm_Grenade.anm");
 		pType.AddItemInHandsProfileIK("AM_Smoke_Improvised_Grenade", "dz/anims/workspaces/player/player_main/player_main_1h.asi", pBehavior,			"dz/anims/anm/player/ik/ammunition/40mm_Grenade.anm");		// Not configured
 	};

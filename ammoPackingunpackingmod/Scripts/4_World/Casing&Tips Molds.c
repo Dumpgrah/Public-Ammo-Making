@@ -10,48 +10,7 @@ class CasingMoldBase : ItemBase
 		}
 		return false;
 	};
-	//int GetOutPutOccupied()
-	//{
-	//	ItemBase thing = ItemBase.Cast(FindAttachmentBySlotName("RifleCasingMold"));
-	//	if(thing)
-	//	{
-	//		if(thing.IsInherited(ND_IngotBase))
-	//		{
-	//			return 1;
-	//		}
-	//		return thing.GetQuantity();
-	//		
-	//	}
-	//
-	//	
-	//	return 0;
-	//};
-	//
-	//void CreateCasingOrTips(string CreationType)
-	//{
-	//	CrucibleMoltenBrass Crucible = m_Player.GetItemInHands();
-	//	
-	//	
-	//	if ( Crucible.m_CastCasing == 0)
-	//	{
-	//		Ham.AddQuantity(-2);
-	//		GetInventory().CreateAttachment("Casing" + CreationType ); //Produces Item in the output slot
-	//		AddHealth("","Health",-2);
-	//	};
-	//	if ( Crucible.m_CastCasing == 1 )
-	//	{
-	//		GetGame().ObjectDelete( GetImPureIronIngot() );
-	//		GetInventory().CreateAttachment("Casing" + CreationType); //Produces Item in the output slot
-	//		AddHealth("","Health",-2);
-	//	};
-	//	if ( thingName == "ND_IronIngot" )
-	//	{
-	//		GetGame().ObjectDelete( GetIronIngot() );
-	//		GetInventory().CreateAttachment("Casing" + CreationType); //Produces Item in the output slot
-	//		AddHealth("","Health",-2);
-	//	};
-	//};
-	
+
 	void ShowSimpleSelection(string selectionName, bool hide = false)
     {
         TStringArray selectionNames = new TStringArray;
@@ -66,33 +25,51 @@ class StrongRifleCasingMold: CasingMoldBase
 {
 	void StrongRifleCasingMold()
 	{
-		ShowSimpleSelection("Casted_Casing", 0);
+		//ShowSimpleSelection("Casted_Casing", 0);
 	};
 	override void EEItemAttached(EntityAI item, string slot_name)
 	{
 		super.EEItemAttached(item,slot_name);
-		if(slot_name == "RifleCasingMold")
-		{
-			ShowSimpleSelection("Casted_Casing", 1);
-		};
+		//if(slot_name == "RifleCasingMold")
+		//{
+		//	ShowSimpleSelection("Casted_Casing", 1);
+		//};
 	};
 	
 	override void EEItemDetached(EntityAI item, string slot_name)
 	{
 		super.EEItemDetached(item, slot_name);
 		
-		if(slot_name == "RifleCasingMold")
-		{
-			ShowSimpleSelection("Casted_Casing", 0);
-
-		};
+		//if(slot_name == "RifleCasingMold")
+		//{
+		//	ShowSimpleSelection("Casted_Casing", 0);
+		//
+		//};
 	};
 	
 	void CreateCasing(string CreationType)
 	{
 		AM_CasingBase Casing = AM_CasingBase.Cast(GetInventory().CreateAttachment("Casing" + CreationType) );
-		Casing.AddQuantity(20);
+		if(Casing && Casing.GetQuantity() >= 0)
+		{
+			Casing.AddQuantity(20);
+		};
 		AddQuantity(-2.5);
+	};
+
+	int GetSlotOccupied()
+	{
+		ItemBase Count = ItemBase.Cast(FindAttachmentBySlotName("RifleCasingMold"));
+		if(Count)
+		{
+			if(Count.IsInherited(AM_CasingBase))
+			{
+				return 1;
+			}
+			return Count.GetQuantity();
+			
+		}
+		return 0;
 	};
 };
 class StrongRifleTipsMold: CasingMoldBase
@@ -123,9 +100,29 @@ class StrongRifleTipsMold: CasingMoldBase
 	void CreateTips(string CreationType)
 	{
 		AM_TipsBase Tips = AM_TipsBase.Cast(GetInventory().CreateAttachment("Tips" + CreationType) );
-		Tips.AddQuantity(20);
+		if(Tips && Tips.GetQuantity() >= 0)
+		{
+			Tips.AddQuantity(20);
+		};
 		AddQuantity(-2.5);
 	};
+	
+	int GetSlotOccupied()
+	{
+		ItemBase Count = ItemBase.Cast(FindAttachmentBySlotName("RifleTipsMold"));
+		if(Count)
+		{
+			if(Count.IsInherited(AM_TipsBase))
+			{
+				return 1;
+			}
+			return Count.GetQuantity();
+			
+		}
+		return 0;
+	};
+	
+	
 };
 class StrongPistolCasingMold: CasingMoldBase
 {
@@ -156,9 +153,28 @@ class StrongPistolCasingMold: CasingMoldBase
 	void CreateCasing(string CreationType)
 	{
 		AM_CasingBase Casing = AM_CasingBase.Cast(GetInventory().CreateAttachment("Casing" + CreationType) );
-		Casing.AddQuantity(20);
+		if(Casing && Casing.GetQuantity() >= 0)
+		{
+			Casing.AddQuantity(20);
+		};
 		AddQuantity(-2.5);
 	};
+	
+	int GetSlotOccupied()
+	{
+		ItemBase Count = ItemBase.Cast(FindAttachmentBySlotName("RifleCasingMold"));
+		if(Count)
+		{
+			if(Count.IsInherited(AM_CasingBase))
+			{
+				return 1;
+			}
+			return Count.GetQuantity();
+			
+		}
+		return 0;
+	};
+	
 };
  
 
@@ -190,7 +206,25 @@ class StrongPistolTipsMold: CasingMoldBase
 	void CreateTips(string CreationType)
 	{
 		AM_TipsBase Tips = AM_TipsBase.Cast(GetInventory().CreateAttachment("Tips" + CreationType) );
-		Tips.AddQuantity(20);
+		if(Tips && Tips.GetQuantity() >= 0)
+		{
+			Tips.AddQuantity(20);
+		};
 		AddQuantity(-2.5);
 	};
+	int GetSlotOccupied()
+	{
+		ItemBase Count = ItemBase.Cast(FindAttachmentBySlotName("RifleTipsMold"));
+		if(Count)
+		{
+			if(Count.IsInherited(AM_TipsBase))
+			{
+				return 1;
+			}
+			return Count.GetQuantity();
+			
+		}
+		return 0;
+	};
+	
 };

@@ -1,6 +1,6 @@
 class MoltenBaseCrucible extends ItemBase
 {
-	override void EOnInit(IEntity other, int extra)
+	void MoltenBaseCrucible()
 	{
 		SetTemperature(500);
 	}
@@ -24,11 +24,23 @@ class CrucibleMoltenBrass extends MoltenBaseCrucible
 	
 	int TempaturetoCast = GetAmmoSmelting().Tempature_To_Cast_Casings;
 	
-	override void EEInit()
+	void CrucibleMoltenBrass()
 	{
-      super.EEInit();
-      RegisterNetSyncVariableInt("m_CastRifleCasing");
-	  RegisterNetSyncVariableInt("m_CastPistolCasing");
+		if(GetTemperature() >=80)
+		{
+			StartCooling();
+			
+		}
+		if(GetTemperature() <=1)
+		{
+			StopCooling();
+		}
+		StartCooling();
+	
+		
+		
+		RegisterNetSyncVariableInt("m_CastRifleCasing");
+		RegisterNetSyncVariableInt("m_CastPistolCasing");
     };
 	bool HotEnough()
 	{
@@ -382,25 +394,7 @@ class CrucibleMoltenBrass extends MoltenBaseCrucible
     };
 
 	protected ref Timer m_AmmoCoolingTimer;
-	
 
-	
-	void CrucibleMoltenBrass()
-	{
-		if(GetTemperature() >=80)
-		{
-			StartCooling();
-			
-		}
-		if(GetTemperature() <=1)
-		{
-			StopCooling();
-		}
-		StartCooling();
-	
-		
-	}
-	
 	override void OnWasDetached(EntityAI parent, int slot_id)
 	{
 		super.OnWasDetached(parent,slot_id);
@@ -434,16 +428,17 @@ class CrucibleMoltenBrass extends MoltenBaseCrucible
 
 		if ( GetTemperature() <= 1)
 		{
-			m_AmmoCoolingTimer.Stop();
-			m_AmmoCoolingTimer = NULL;
-			//Print("zxd");
+			StopCooling();
 		}
 	}
 	protected void StopCooling()
 	{
 		//Stop cooling
-		m_AmmoCoolingTimer.Stop();
-		m_AmmoCoolingTimer = NULL;
+		if(m_AmmoCoolingTimer)
+		{
+			m_AmmoCoolingTimer.Stop();
+			m_AmmoCoolingTimer = NULL;
+		}
 
 	
 	}
@@ -473,9 +468,19 @@ class CrucibleMoltenLead extends MoltenBaseCrucible
 	int m_CastPistolTips = 0;
 	int TempaturetoCast = GetAmmoSmelting().Tempature_To_Cast_Tips;
 	
-	override void EEInit()
+	void CrucibleMoltenLead()
 	{
-      super.EEInit();
+		if(GetTemperature() >=80)
+		{
+			StartCooling();
+		}
+		if(GetTemperature() <=0)
+		{
+			StopCooling();
+		}
+		StartCooling();	
+		
+		
       RegisterNetSyncVariableInt("m_CastRifleTips");
 	  RegisterNetSyncVariableInt("m_CastPistolTips");
     };
@@ -501,7 +506,7 @@ class CrucibleMoltenLead extends MoltenBaseCrucible
 			{
 				return "Not Hot Enough";
 			};
-			return "Not Enough Brass";
+			return "Not Enough Lead";
         }
 		if(m_CastRifleTips == 1)
 		{
@@ -513,7 +518,7 @@ class CrucibleMoltenLead extends MoltenBaseCrucible
 			{
 				return "Not Hot Enough";
 			};
-			return "Not Enough Brass";	
+			return "Not Enough Lead";	
 		}		
 		if (m_CastRifleTips == 2)
 		{
@@ -525,7 +530,7 @@ class CrucibleMoltenLead extends MoltenBaseCrucible
 			{
 				return "Not Hot Enough";
 			};
-			return "Not Enough Brass";	
+			return "Not Enough Lead";	
         }
 		if (m_CastRifleTips == 3)
 		{
@@ -537,7 +542,7 @@ class CrucibleMoltenLead extends MoltenBaseCrucible
 			{
 				return "Not Hot Enough";
 			};
-			return "Not Enough Brass";	
+			return "Not Enough Lead";	
         }
 		if (m_CastRifleTips == 4)
 		{
@@ -549,7 +554,7 @@ class CrucibleMoltenLead extends MoltenBaseCrucible
 			{
 				return "Not Hot Enough";
 			};
-			return "Not Enough Brass";
+			return "Not Enough Lead";
         }
 		if (m_CastRifleTips == 5)
 		{
@@ -561,7 +566,7 @@ class CrucibleMoltenLead extends MoltenBaseCrucible
 			{
 				return "Not Hot Enough";
 			};
-			return "Not Enough Brass";
+			return "Not Enough Lead";
         }
 		if (m_CastRifleTips == 6)
 		{
@@ -573,7 +578,7 @@ class CrucibleMoltenLead extends MoltenBaseCrucible
 			{
 				return "Not Hot Enough";
 			};
-			return "Not Enough Brass";
+			return "Not Enough Lead";
         }
         return "";
 		
@@ -591,7 +596,7 @@ class CrucibleMoltenLead extends MoltenBaseCrucible
 			{
 				return "Not Hot Enough";
 			};
-			return "Not Enough Brass";
+			return "Not Enough Lead";
         }
 		if (m_CastPistolTips == 1)
 		{
@@ -603,7 +608,7 @@ class CrucibleMoltenLead extends MoltenBaseCrucible
 			{
 				return "Not Hot Enough";
 			};
-			return "Not Enough Brass";
+			return "Not Enough Lead";
         }
         if (m_CastPistolTips == 2)
 		{
@@ -615,7 +620,7 @@ class CrucibleMoltenLead extends MoltenBaseCrucible
 			{
 				return "Not Hot Enough";
 			};
-			return "Not Enough Brass";
+			return "Not Enough Lead";
         }
 		if (m_CastPistolTips == 3)
 		{
@@ -627,7 +632,7 @@ class CrucibleMoltenLead extends MoltenBaseCrucible
 			{
 				return "Not Hot Enough";
 			};
-			return "Not Enough Brass";
+			return "Not Enough Lead";
         }
 		if (m_CastPistolTips == 4)
 		{
@@ -639,7 +644,7 @@ class CrucibleMoltenLead extends MoltenBaseCrucible
 			{
 				return "Not Hot Enough";
 			};
-			return "Not Enough Brass";
+			return "Not Enough Lead";
         }
 		if (m_CastPistolTips == 5)
 		{
@@ -651,7 +656,7 @@ class CrucibleMoltenLead extends MoltenBaseCrucible
 			{
 				return "Not Hot Enough";
 			};
-			return "Not Enough Brass";
+			return "Not Enough Lead";
         }	
 			
         return "";
@@ -884,19 +889,6 @@ class CrucibleMoltenLead extends MoltenBaseCrucible
 		SetTemperature(300);
 	}
 	
-	void CrucibleMoltenLead()
-	{
-		if(GetTemperature() >=80)
-		{
-			StartCooling();
-		}
-		if(GetTemperature() >=0)
-		{
-			StopCooling();
-		}
-		StartCooling();
-		
-	}
 	override void OnWasDetached(EntityAI parent, int slot_id)
 	{
 		super.OnWasDetached(parent,slot_id);
@@ -909,8 +901,6 @@ class CrucibleMoltenLead extends MoltenBaseCrucible
 	}
 	protected void StartCooling()
 	{
-
-		
 		m_AmmoCoolingTimer = new Timer( CALL_CATEGORY_GAMEPLAY );
 		m_AmmoCoolingTimer.Run( 3, this, "Cooling", NULL, true );		// true param loops
 	}
@@ -928,14 +918,12 @@ class CrucibleMoltenLead extends MoltenBaseCrucible
 
 		if ( GetTemperature() <= 1)
 		{
-			m_AmmoCoolingTimer.Stop();
-			m_AmmoCoolingTimer = NULL;
-			//Print("zxd");
+			StopCooling();
 		}
 	}
 	protected void StopCooling()
 	{
-		if(m_AmmoCoolingTimer.IsRunning())
+		if(m_AmmoCoolingTimer)
 		{
 			//Stop cooling
 			m_AmmoCoolingTimer.Stop();

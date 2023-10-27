@@ -220,7 +220,10 @@ class StandAloneSmelter extends ItemBase
 		m_IsCurrentlySmelting = false;
 		StopParticle(m_PaticleFireStart);
 		//StopParticle(m_ParticleSmokeStart);
-		GetLightEntity().FadeOut();
+		if (GetLightEntity())
+		{
+			GetLightEntity().FadeOut();
+		}
 		LockGas(false);
 		StopHeating();
 		StartCooling();
@@ -304,8 +307,11 @@ class StandAloneSmelter extends ItemBase
 
 	protected void StopHeating()
 	{
-		m_HeatingTimer.Stop();
-		m_HeatingTimer = NULL;
+		if(m_HeatingTimer)
+		{
+			m_HeatingTimer.Stop();
+			m_HeatingTimer = NULL;
+		};
 	}
 	protected void StartCooling()
 	{
@@ -336,9 +342,11 @@ class StandAloneSmelter extends ItemBase
 	protected void StopCooling()
 	{
 		//Stop cooling
-		m_CoolingTimer.Stop();
-		m_CoolingTimer = NULL;
-
+		if(m_CoolingTimer)
+		{
+			m_CoolingTimer.Stop();
+			m_CoolingTimer = NULL;
+		};
 	}
 
 	//Do heating
@@ -438,35 +446,64 @@ class StandAloneSmelter extends ItemBase
 
     LargeGasCanister GetlargeGasFuel()
 	{
+		if (!GetInventory())
+		{
+			return null;
+		}
+		
 		return LargeGasCanister.Cast( GetAttachmentByType(LargeGasCanister) );
 	}
 	MediumGasCanister GetMediumGasFuel()
 	{
+		if (!GetInventory())
+		{
+			return null;
+		}
 		return MediumGasCanister.Cast( GetAttachmentByType(MediumGasCanister) );
 	}
 	SmallGasCanister GetSmallGasFuel()
 	{
+		if (!GetInventory())
+		{
+			return null;
+		}
 		return SmallGasCanister.Cast( GetAttachmentByType(SmallGasCanister) );
 	}
 	
 
 	CrucibleFilledTips GetTheTip()
 	{
+		if (!GetInventory())
+		{
+			return null;
+		}
 		return CrucibleFilledTips.Cast( GetAttachmentByType(CrucibleFilledTips) );
 	}
 
 	CrucibleFilledCasing GetCasing()
 	{
+		if (!GetInventory())
+		{
+			return null;
+		}
 		return CrucibleFilledCasing.Cast( GetAttachmentByType(CrucibleFilledCasing) );
 	}
 
 	CrucibleMoltenBrass GetMoltenBrass()
 	{
+		if (!GetInventory())
+		{
+			return null;
+		}
 		return CrucibleMoltenBrass.Cast( GetAttachmentByType( CrucibleMoltenBrass ));
 	}
 
 	CrucibleMoltenLead GetMoltenLead()
 	{
+		if (!GetInventory())
+		{
+			return null;
+		}
 		return CrucibleMoltenLead.Cast( GetAttachmentByType( CrucibleMoltenLead ) );
 	}
 
